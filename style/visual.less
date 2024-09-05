@@ -1,0 +1,70 @@
+p {
+  font-size: 20px;
+  font-weight: bold;
+  em {
+    background: yellow;
+    padding: 5px;
+  }
+}
+
+.response-box {
+  border: 1px solid #ddd; /* Example border */
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f9f9f9; /* Example background color */
+  overflow: auto; /* In case of overflow */
+  max-height: 300px; /* max height of the box */
+}
+
+.custom-button {
+  background-color: #4caf50; /* Green background */
+  border: none;
+  color: white;
+  padding: 15px 32px; /* Bigger size */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.custom-button:hover {
+  background-color: #45a049; /* Darker shade for hover effect */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container button {
+  order: -1; /* This will bring the buttons to the top */
+}
+@loaderBorderColor: #f3f3f3;
+@loaderBorderTopColor: #3498db;
+@loaderSize: 60px; // Adjust size as needed
+
+.loading-indicator {
+  border: 4px solid @loaderBorderColor;
+  border-top: 4px solid @loaderBorderTopColor;
+  border-radius: 50%;
+  width: @loaderSize;
+  height: @loaderSize;
+  animation: spin 2s linear infinite;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

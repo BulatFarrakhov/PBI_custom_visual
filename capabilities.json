@@ -1,0 +1,205 @@
+{
+  "supportsLandingPage": true,
+  "supportsEmptyDataView": true,
+  "dataRoles": [
+    {
+      "displayName": "Category Data",
+      "name": "category",
+      "kind": "Grouping"
+    },
+    {
+      "displayName": "Measure Data",
+      "name": "measure",
+      "kind": "Measure"
+    }
+  ],
+  "objects": {
+    "dataPoint": {
+      "properties": {
+        "defaultColor": {
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "showAllDataPoints": {
+          "type": {
+            "bool": true
+          }
+        },
+        "fill": {
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "fillRule": {
+          "type": {
+            "fill": {}
+          }
+        },
+        "fontSize": {
+          "type": {
+            "formatting": {
+              "fontSize": true
+            }
+          }
+        }
+      }
+    },
+    "responseNodeFormatting": {
+      "displayName": "Response Node Formatting",
+      "properties": {
+        "maxHeight": {
+          "displayName": "Max Height",
+          "type": {
+            "numeric": true
+          }
+        }
+      }
+    },
+    "modelSelection": {
+      "displayName": "Model Selection",
+      "properties": {
+        "modelType": {
+          "displayName": "Choose Model",
+          "type": {
+            "enumeration": [
+              { "value": "gpt-3.5-turbo", "displayName": "GPT-3" },
+              { "value": "gpt-4", "displayName": "GPT-4" }
+            ]
+          }
+        }
+      }
+    },
+    "describePrompt": {
+      "displayName": "Prompt Customization",
+      "properties": {
+        "customDescribePrompt": {
+          "displayName": "Custom Describe Prompt",
+          "type": {
+            "text": true
+          }
+        },
+        "customInsightsPrompt": {
+          "displayName": "Custom Insights Prompt",
+          "type": {
+            "text": true
+          }
+        }
+      }
+    },
+    "buttonTextSettings": {
+      "displayName": "Button Text Settings",
+      "properties": {
+        "describeButtonText": {
+          "displayName": "Describe Button Text",
+          "type": {
+            "text": true
+          }
+        },
+        "insightsButtonText": {
+          "displayName": "Insights Button Text",
+          "type": {
+            "text": true
+          }
+        }
+      }
+    },
+    "buttonVisibility": {
+      "displayName": "Button Visibility Settings",
+      "properties": {
+        "describeButtonVisible": {
+          "displayName": "Show Describe Button",
+          "type": {
+            "bool": true
+          }
+        },
+        "insightsButtonVisible": {
+          "displayName": "Show Insights Button",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    },
+    "buttonFormatting": {
+      "displayName": "Button Formatting",
+      "properties": {
+        "buttonColor": {
+          "displayName": "Button Color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "hoverColor": {
+          "displayName": "Hover Color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "userDetails": {
+      "displayName": "User Details",
+      "properties": {
+        "company": {
+          "displayName": "Company",
+          "type": { "text": true }
+        },
+        "project": {
+          "displayName": "Project",
+          "type": { "text": true }
+        },
+        "email": {
+          "displayName": "Email",
+          "type": { "text": true }
+        }
+      }
+    }
+  },
+  "dataViewMappings": [
+    {
+      "categorical": {
+        "categories": {
+          "for": {
+            "in": "category"
+          },
+          "dataReductionAlgorithm": {
+            "top": {}
+          }
+        },
+        "values": {
+          "select": [
+            {
+              "bind": {
+                "to": "measure"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "privileges": [
+    {
+      "name": "WebAccess",
+      "essential": true,
+      "parameters": []
+    }
+  ]
+}

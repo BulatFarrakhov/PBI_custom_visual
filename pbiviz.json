@@ -1,0 +1,21 @@
+{
+  "visual": {
+    "name": "OpenAIPowerInsight",
+    "displayName": "AI Insights Generator",
+    "guid": "myCustomVisualA953B8DFA6E94CECB265F47923E24FF8",
+    "visualClassName": "Visual",
+    "version": "1.0.0.0",
+    "description": "This custom visual integrates Power BI data with OpenAI's API to generate and return insightful text, enhancing data interpretation and analysis.",
+    "supportUrl": "https://github.com/BulatF/pbi_custom_t1",
+    "gitHubUrl": ""
+  },
+  "apiVersion": "5.3.0",
+  "author": { "name": "BulatF", "email": "bulat.farrakhov@img.com" },
+  "assets": { "icon": "assets/better_icon.png" },
+  "externalJS": null,
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "dependencies": null,
+  "stringResources": [],
+  "version": "1.1.0.0"
+}
